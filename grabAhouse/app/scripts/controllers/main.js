@@ -33,7 +33,7 @@ angular.module('dynamicFormApp')
       };
 
  $scope.entities = [];
-var url='http://192.168.0.149:1337/entities'
+var url='http://192.168.8.64:1337/entities'
 
 
  $http.get(url)
@@ -81,7 +81,7 @@ console.log($scope.responseData);
 
         console.log($scope.entity);
 
-var posturl='http://192.168.0.149:1337/entities/postData';
+var posturl='http://192.168.8.64:1337/entities/postData';
 
 
     var config = {
@@ -230,7 +230,7 @@ $scope.postData={};
 var data=$scope.entity;
 console.log(data+"data");
 
-var posturl='http://192.168.0.149:1337/entities/postData';
+var posturl='http://192.168.8.64:1337/entities/postData';
 
          $http.post(posturl,data,config)
     .then(function(response) {
